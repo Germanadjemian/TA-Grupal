@@ -43,7 +43,7 @@ class taskCard {
                 <div class="content">${desc}</div>
             </div>
         `;
-
+        
         this.state = estado;
         this.element.innerHTML = card_template;
         this.is_empty = false;

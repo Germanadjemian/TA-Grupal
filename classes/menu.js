@@ -56,9 +56,15 @@ class taskMenu {
                 console.log(estado);
                 console.log(fecha_limite);
 
-                task.fill(titulo, descripcion, asignado, prioridad, estado, fecha_limite);
-                dashboard.columns[0].placeCard(task);
-                this.close();
+                if(titulo && descripcion && asignado && prioridad && estado && fecha_limite){
+                    task.fill(titulo, descripcion, asignado, prioridad, estado, fecha_limite);
+                    dashboard.columns[0].placeCard(task);
+                    this.close();
+                }
+                else{
+                    alert("Ingrese todos los datos.");
+                }
+               
             });
         } else {
             title = "Editar tarea";
